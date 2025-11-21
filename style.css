@@ -1,0 +1,199 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* FULL PAGE NEON DARK BACKGROUND */
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background: radial-gradient(circle at top, #0a0f1f, #000000 80%);
+    color: #fff;
+}
+
+/* NEON CARD (Glass + Glow) */
+.container {
+    width: 380px;
+    background: rgba(15, 15, 40, 0.65);
+    border-radius: 15px;
+    padding-bottom: 25px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+    animation: popup 0.6s ease;
+}
+
+@keyframes popup {
+    0% { transform: scale(0.85); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* HEADING WITH NEON GLOW */
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #00eaff;
+    text-shadow: 0 0 12px #00eaff;
+}
+
+/* INPUT SECTION */
+#addsec {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.15);
+    margin: 0 15px;
+    border-radius: 10px;
+}
+
+/* INPUT FIELD */
+#addsec #inputtask {
+    padding: 12px;
+    width: 240px;
+    border-radius: 8px;
+    background: rgba(20, 20, 40, 0.6);
+    border: 2px solid transparent;
+    outline: none;
+    color: #0ff;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+#addsec #inputtask::placeholder {
+    color: #78f7ff94;
+}
+
+#addsec #inputtask:focus {
+    border-color: #00eaff;
+    box-shadow: 0 0 12px #00eaff;
+}
+
+/* ADD BUTTON (NEON BLUE) */
+#addbtn {
+    border: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    width: 90px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    background: #00eaff;
+    box-shadow: 0 0 18px #00eaff;
+    transition: 0.3s ease;
+}
+
+#addbtn:hover {
+    background: #00bcd4;
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px #00eaff;
+}
+
+/* LIST SECTION */
+ul {
+    list-style: none;
+    margin-top: 22px;
+    padding: 0 18px;
+}
+
+/* SINGLE TASK */
+li {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: rgba(20, 20, 40, 0.7);
+    margin-bottom: 14px;
+    border-radius: 10px;
+    color: #b8f7ff;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+    transition: 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 22px rgba(0, 255, 255, 0.3);
+}
+
+/* TIMER BOX */
+.timerBox {
+    margin-right: auto;
+    margin-left: 12px;
+}
+
+/* TIMER TEXT */
+.timer {
+    font-size: 14px;
+    font-weight: bold;
+    color: #00ffea;
+    text-shadow: 0 0 8px #00fff2;
+}
+
+/* BLINK TIMER WHEN LESS THAN 5 SEC */
+.timer.blink {
+    color: #ff3b3b;
+    text-shadow: 0 0 12px #ff3b3b;
+    animation: blink 0.8s infinite alternate;
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    to   { opacity: 0.3; }
+}
+
+/* TIME UP STYLE */
+.timer.timeup {
+    color: #ff0000;
+    font-weight: 700;
+    text-shadow: 0 0 20px #ff0000;
+    animation: timeupGlow 0.8s infinite alternate;
+}
+
+@keyframes timeupGlow {
+    from { text-shadow: 0 0 10px #ff0000; }
+    to   { text-shadow: 0 0 20px #ff0000; }
+}
+
+/* BUTTONS INSIDE TASK */
+.btns button {
+    margin-left: 6px;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: #fff;
+}
+
+/* EDIT BUTTON (NEON GREEN) */
+.edit {
+    background: #00ff95;
+    box-shadow: 0 0 12px #00ff95;
+}
+
+.edit:hover {
+    background: #00d67a;
+    box-shadow: 0 0 22px #00ff95;
+}
+
+/* DELETE BUTTON (NEON RED) */
+.delete {
+    background: #ff3b3b;
+    box-shadow: 0 0 12px #ff3b3b;
+}
+
+.delete:hover {
+    background: #e62929;
+    box-shadow: 0 0 22px #ff3b3b;
+}
